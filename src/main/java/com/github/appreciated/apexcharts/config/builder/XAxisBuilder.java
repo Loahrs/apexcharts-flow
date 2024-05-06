@@ -24,6 +24,7 @@ public class XAxisBuilder {
     private Crosshairs crosshairs;
     private com.github.appreciated.apexcharts.config.Tooltip tooltip;
     private Labels labels;
+    private Double decimalsInFloat;
 
     private XAxisBuilder() {
     }
@@ -112,6 +113,11 @@ public class XAxisBuilder {
         return this;
     }
 
+    public XAxisBuilder withDecimalsInFloat(Double decimalsInFloat) {
+        this.decimalsInFloat = decimalsInFloat;
+        return this;
+    }
+
     public XAxis build() {
         XAxis xAxis = new XAxis();
         xAxis.setType(type);
@@ -129,6 +135,7 @@ public class XAxisBuilder {
         xAxis.setCrosshairs(crosshairs);
         xAxis.setTooltip(tooltip);
         xAxis.setLabels(labels);
+        xAxis.setDecimalsInFloat(decimalsInFloat);
         return xAxis;
     }
 }

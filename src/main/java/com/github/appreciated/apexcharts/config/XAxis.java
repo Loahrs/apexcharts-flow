@@ -21,6 +21,7 @@ public class XAxis {
     private Crosshairs crosshairs;
     private Tooltip tooltip;
     private Labels labels;
+    private Double decimalsInFloat;
 
     public XAxis() {
     }
@@ -145,4 +146,11 @@ public class XAxis {
         this.labels = labels;
     }
 
+    public void setDecimalsInFloat(Double decimalsInFloat) {
+        this.decimalsInFloat = decimalsInFloat;
+    }
+
+    public Double getDecimalsInFloat() {
+        return decimalsInFloat;
+    }
 }
